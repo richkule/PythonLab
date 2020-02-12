@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Архив статей</title>
+    </head>
+    <body>
+        <div class="header">
+            <img src="{{ STATIC_URL }}static/img/logo.png" width="30px" height="30px" />
+        </div>
+        {% for post in posts %}
+            <div class="archive">
+                <div class="one-post">
+                    <h2 class="post-title">{{ post.title }}</h2>
+                    <div class="article-info">
+                        <div class="article-author">{{ post.author.username }}</div>
+                        <div class="article-created-date">{{ post.created_date }}</div>
+                        <div class="article-created-date">{{ STATIC_URL }}</div>
+                    </div>
+                    <p class="article-text">{{ post.get_excerpt }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </body>
+</html>

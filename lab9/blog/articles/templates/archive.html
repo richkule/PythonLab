@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ STATIC_URL }}/static/css/article.css">
+        <title>Архив статей</title>
+    </head>
+    <body class = "archive">
+       
+		<div class="header">
+			<img class="logo" src="{{ STATIC_URL }}/static/img/logo.png" alt="Logo"/>
+				<div class="header-text-area">
+					<p class="service-title">Коллективный блог</p>
+					<a href="/registration/" class="register-link">Регистрация</a>
+					<a href="/auth/" class="login-link">Вход</a>
+				</div>
+				<div class="icons-for-parallax">
+					<img class="icon-for-parallax-first" src="{{ STATIC_URL }}/static/img/article-icon-for-parallax.png">
+					<img class="icon-for-parallax-second" src="{{ STATIC_URL }}/static/img/article-icon-for-parallax.png">
+					<img class="icon-for-parallax-third" src="{{ STATIC_URL }}/static/img/article-icon-for-parallax.png">
+			</div>
+		</div>
+		<div class="posts"> 
+	        {% for post in posts %}
+	            <div class="archives">
+	                   <div class="one-post">
+	                   <div class="one-post-shadow"></div>
+	                    <u class="fold-button">свернуть</u>
+	                    <h2 class="post-title">
+	                        <a href="/article/{{ post.id }}">{{ post.title }}</a>
+	                    </h2>
+	                    <div class="article-info">
+	                        <div class="article-author">{{ post.author.username }}</div>
+	                        <div class="article-created-date">{{ post.created_date }}</div>
+	                    </div>
+	                    <p class="article-text">{{ post.get_excerpt }}</p>
+	                </div>
+	            </div>
+	        {% endfor %}
+	        <script src="{{ STATIC_URL }}/static/js/helloworld.js"></script>
+	        <script src="{{ STATIC_URL }}/static/js/fold-post.js"></script>
+	        <script src="{{ STATIC_URL }}/static/js/jquery-3.4.1.min.js"></script>
+	        <script src="{{ STATIC_URL }}/static/js/highlight-post.js"></script>
+	        <script src="{{ STATIC_URL }}/static/js/parallax.js"></script>
+        </div>
+    </body>
+</html>

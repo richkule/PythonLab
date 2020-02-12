@@ -1,0 +1,135 @@
+body {
+	background: #caeae4;
+	font-family: Tahoma, Arial, sans-serif; 
+	color: #0b5d4d;
+	font-weight: bold;
+}
+.logo {
+	display: block; 
+	width: 600px; 
+	height: 300px;
+	margin-left: auto; 
+	margin-right: auto;
+	position: relative;
+}
+.archive {
+	width: 960px; 
+	margin-left: auto;
+	margin-right: auto;
+}
+.article {
+	width: 960px; 
+	margin-left: auto;
+	margin-right: auto;
+}
+.all-post a {
+	float: right;
+	color: #0b5d4d;
+	z-index: 2;
+}
+.all-post {
+	margin-bottom: 50px;
+}
+.article .post-title{
+	text-align: center;
+}
+.post-title a {
+	color: #0b5d4d;
+	z-index: 2;
+}
+
+.article-author { 
+	width: 50%; 
+	float: left;
+}
+.article-created-date { 
+	text-align: right;
+}
+
+.fold-button{
+	float:  right;
+
+}
+.one-post.folded .article-author{
+	display: none;
+}
+.one-post.folded .article-created-date{
+	display: none;
+}
+.one-post.folded .article-text{
+	display: none;
+}
+.one-post{
+	position: relative;
+	height: auto;
+	width: auto;
+}
+.one-post-shadow{
+	 position: absolute; 
+	 margin-top: 30px;
+	 left:0;
+	 right:0;
+	 top:0;
+	 bottom:0;
+	 background: black;
+	 z-index: 1; /* это свойство «отодвигает» элемент на задний план */
+	 opacity: 0
+}
+.header-text-area{
+	float: left;
+	width: 70%;
+	text-align: center;
+}
+.icons-for-parallax {
+	 height: 530px;
+	 position: relative;
+	 display: inline-block;
+}
+.icons-for-parallax img {
+	 /* здесь находятся общие для всех картинок стили */
+	 position: absolute;
+	 top: 0;
+
+}
+.icon-for-parallax-first {
+	 width: 200px;
+	 margin-top: 200px;
+	 z-index: 3; /* эта картинка на переднем плане, у неё больший z-index
+*/
+}
+.icon-for-parallax-second {
+	 width: 175px; /* уменьшить ширину для картинки, чтобы визуально */
+	 /* находилась дальше для пользователя */
+	 margin-top: 100px; /* эта картинка слегка смещена вправо и вниз */
+	 margin-left: 80px; /* за счет левой и верхней границ */
+	 z-index: 2;
+}
+.icon-for-parallax-third{
+	 width: 150px;
+	 margin-left: 160px;
+	 z-index: 1; /* эта картинка на заднем плане, у неё меньший z-index */
+}
+.header{
+	height: auto;
+}
+.service-title{
+	font-size: 64px;
+
+}
+.register-link{
+	float: left;
+	font-size: 48px;
+	color: #19b99a
+
+}
+.login-link{
+	float: right;
+	font-size: 48px;
+	color: #19b99a
+}
+.posts{
+	background: #96dacd;
+}
+.article-text{
+	font-weight: normal;
+}
